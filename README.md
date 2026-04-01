@@ -12,6 +12,7 @@ A backup of all Homebrew taps, formulae, and casks installed on my Mac.
 | [yt-dlp](https://github.com/yt-dlp/yt-dlp) | Feature-rich command-line audio/video downloader. |
 | [mpv](https://mpv.io) | Media player based on MPlayer and mplayer2. |
 | [nvm](https://github.com/nvm-sh/nvm) | Manage multiple Node.js versions. |
+| [poppler](https://poppler.freedesktop.org/) | PDF rendering library (based on the xpdf-3.0 code base). |
 | [scdl](https://github.com/scdl-org/scdl) | Command-line tool to download music from SoundCloud. |
 | [xcodegen](https://github.com/yonaskolb/XcodeGen) | Generate your Xcode project from a spec file and your folder structure. |
 
