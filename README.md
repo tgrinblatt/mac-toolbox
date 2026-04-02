@@ -1,52 +1,79 @@
-# Homebrew Backup
+# Tech Stack
 
-A backup of all Homebrew taps, formulae, and casks installed on my Mac.
+Backup of all tools, packages, and applications installed on my Mac — organized for easy restore on a fresh machine.
 
-## Formulae
-
-| App | Description |
-|-----|-------------|
-| [ffmpeg](https://ffmpeg.org/) | Play, record, convert, and stream select audio and video codecs. |
-| [gallery-dl](https://github.com/mikf/gallery-dl) | Command-line program to download image galleries and collections. |
-| [gh](https://cli.github.com/) | GitHub command-line tool. |
-| [gifsicle](https://www.lcdf.org/gifsicle/) | GIF image/animation creator/editor. |
-| [imagemagick](https://imagemagick.org/) | Tools and libraries to manipulate images in many formats. |
-| [jq](https://jqlang.github.io/jq/) | Lightweight and flexible command-line JSON processor. |
-| [mpv](https://mpv.io) | Media player based on MPlayer and mplayer2. |
-| [nvm](https://github.com/nvm-sh/nvm) | Manage multiple Node.js versions. |
-| [poppler](https://poppler.freedesktop.org/) | PDF rendering library (based on the xpdf-3.0 code base). |
-| [scdl](https://github.com/scdl-org/scdl) | Command-line tool to download music from SoundCloud. |
-| [xcodegen](https://github.com/yonaskolb/XcodeGen) | Generate your Xcode project from a spec file and your folder structure. |
-| [yt-dlp](https://github.com/yt-dlp/yt-dlp) | Feature-rich command-line audio/video downloader. |
-
-## Casks
-
-| App | Description |
-|-----|-------------|
-| [AppCleaner](https://freemacsoft.net/appcleaner/) | Thoroughly uninstall unwanted apps and their leftover files. |
-| [cmux](https://cmux.com) | Lightweight native macOS terminal with vertical tabs for AI coding agents. |
-| [DeskPad](https://github.com/Stengo/DeskPad) | Virtual monitor for screen sharing. |
-| [Ice](https://icemenubar.app/) | Menu bar manager. |
-| [QuickLook Video](https://github.com/Marginal/QuickLookVideo) | Thumbnails, static previews, cover art and metadata for video files. |
-| [Reminders MenuBar](https://github.com/DamascenoRafael/reminders-menubar) | Simple menu bar app to view and interact with reminders. |
-| [Shottr](https://shottr.cc/) | Screenshot tool with annotation, OCR, and scrolling capture. |
-
-## Restore on a new Mac
-
-1. Install [Homebrew](https://brew.sh)
-2. Clone this repo
-3. Run:
+## Quick Restore
 
 ```sh
-brew bundle --file=Brewfile
+git clone https://github.com/tgrinblatt/mac-toolbox.git
+cd mac-toolbox
+./setup.sh
 ```
 
-This will install everything listed in the `Brewfile`.
+## What's Tracked
 
-## Update the Brewfile
+### Homebrew Formulae (CLI Tools)
 
-To regenerate the `Brewfile` with your current installations:
+| Formula | Description |
+|---------|-------------|
+| [ffmpeg](https://ffmpeg.org/) | Audio/video conversion, recording, and streaming. |
+| [gallery-dl](https://github.com/mikf/gallery-dl) | Download image galleries and collections from the web. |
+| [gh](https://cli.github.com/) | GitHub command-line tool. |
+| [gifsicle](https://www.lcdf.org/gifsicle/) | GIF image/animation creator and editor. |
+| [imagemagick](https://imagemagick.org/) | Image manipulation tools and libraries. |
+| [jq](https://jqlang.github.io/jq/) | Lightweight command-line JSON processor. |
+| [mpv](https://mpv.io) | Media player based on MPlayer and mplayer2. |
+| [nvm](https://github.com/nvm-sh/nvm) | Manage multiple Node.js versions. |
+| [pipx](https://pipx.pypa.io/) | Install and run Python CLI tools in isolated environments. |
+| [poppler](https://poppler.freedesktop.org/) | PDF rendering library. |
+| [scdl](https://github.com/scdl-org/scdl) | Download music from SoundCloud. |
+| [snappy](https://google.github.io/snappy/) | Fast compression/decompression library (dependency for keynote-parser). |
+| [xcodegen](https://github.com/yonaskolb/XcodeGen) | Generate Xcode projects from a spec file. |
+| [yt-dlp](https://github.com/yt-dlp/yt-dlp) | Feature-rich audio/video downloader. |
+
+### Homebrew Casks (GUI Apps)
+
+| App | Description |
+|-----|-------------|
+| [AppCleaner](https://freemacsoft.net/appcleaner/) | Thorough app uninstaller. |
+| [cmux](https://cmux.com) | Lightweight macOS terminal with vertical tabs for AI coding agents. |
+| [DeskPad](https://github.com/Stengo/DeskPad) | Virtual monitor for screen sharing. |
+| [Ice](https://icemenubar.app/) | Menu bar manager. |
+| [QuickLook Video](https://github.com/Marginal/QuickLookVideo) | Thumbnails and previews for video files in Finder. |
+| [Reminders MenuBar](https://github.com/DamascenoRafael/reminders-menubar) | Menu bar app for Apple Reminders. |
+| [Shottr](https://shottr.cc/) | Screenshot tool with annotation, OCR, and scrolling capture. |
+
+### Pipx Packages (Python CLI Tools)
+
+| Package | Description |
+|---------|-------------|
+| [keynote-parser](https://github.com/psobot/keynote-parser) | Unpack, edit, and repack Apple Keynote files as YAML. |
+
+## File Structure
+
+```
+Brewfile            # Homebrew formulae, casks, and taps
+pipx-packages.txt   # Python CLI tools installed via pipx
+setup.sh            # One-command restore script
+```
+
+## Updating
+
+### Refresh Brewfile with current installations
 
 ```sh
 brew bundle dump --file=Brewfile --force
+```
+
+### Refresh pipx packages list
+
+```sh
+pipx list --short | awk '{print $1}' > pipx-packages.txt
+```
+
+### After adding new tools, commit
+
+```sh
+git add -A && git commit -m "Update tech stack"
+git push
 ```
