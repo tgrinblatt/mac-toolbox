@@ -20,14 +20,17 @@ cd mac-toolbox
 | [gallery-dl](https://github.com/mikf/gallery-dl) | Download image galleries and collections from the web. |
 | [gh](https://cli.github.com/) | GitHub command-line tool. |
 | [gifsicle](https://www.lcdf.org/gifsicle/) | GIF image/animation creator and editor. |
+| [go](https://go.dev/) | The Go programming language. |
 | [imagemagick](https://imagemagick.org/) | Image manipulation tools and libraries. |
 | [jq](https://jqlang.github.io/jq/) | Lightweight command-line JSON processor. |
+| [macmon](https://github.com/vladkens/macmon) | Sudoless performance monitoring for Apple Silicon. |
 | [mpv](https://mpv.io) | Media player based on MPlayer and mplayer2. |
 | [nvm](https://github.com/nvm-sh/nvm) | Manage multiple Node.js versions. |
 | [pipx](https://pipx.pypa.io/) | Install and run Python CLI tools in isolated environments. |
 | [poppler](https://poppler.freedesktop.org/) | PDF rendering library. |
 | [scdl](https://github.com/scdl-org/scdl) | Download music from SoundCloud. |
 | [snappy](https://google.github.io/snappy/) | Fast compression/decompression library (dependency for keynote-parser). |
+| [wtfutil](https://wtfutil.com/) | Personal information dashboard for your terminal. |
 | [xcodegen](https://github.com/yonaskolb/XcodeGen) | Generate Xcode projects from a spec file. |
 | [yt-dlp](https://github.com/yt-dlp/yt-dlp) | Feature-rich audio/video downloader. |
 
