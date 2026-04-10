@@ -18,6 +18,7 @@ cd mac-toolbox
 |-----|-------------|
 | [macmon](https://github.com/vladkens/macmon) | Sudoless performance monitoring for Apple Silicon. |
 | [mpv](https://mpv.io) | Media player based on MPlayer and mplayer2. |
+| [slack-chat-cli](https://github.com/open-cli-collective/slack-chat-cli) | Chat with Slack from the terminal. |
 | [wtfutil](https://wtfutil.com/) | Personal information dashboard for your terminal. |
 
 ### Homebrew Formulae (Libraries & Dev Tools)
